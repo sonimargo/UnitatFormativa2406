@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+
+</head>
+
+
+<body>
+
+	<h2 align="center">Alta Nueva Cita</h2>
+	
+	<form action="insertarCita">
+	
+		<div class="form-group">
+	
+			<label for="txtcita">Cita:</label> 
+			<input type="text" name="cita" class="form-control" id="txtcita" />
+	
+			<div th:object="${book}">
+				<label>Seleccionar libror</label>
+				<select id="selectLibro" 
+						name="libroId">
+					<option th:value="0">Sin Libro asignado</option>
+					<option th:each="libroFor : ${listaLibros}" 
+					        th:value="${libroFor.idBook}"
+					  		th:text="${libroFor.idBook}+' '+${libroFor.titulo}">
+					</option>
+				</select>	
+			</div>
+			
+			
+			<div>
+				<input id="btnAltaCita" class=boton type="submit" value="ALTA CITA"/>
+			</div>
+			
+			
+		</div>	
+	</form>
+</body>
+</html>

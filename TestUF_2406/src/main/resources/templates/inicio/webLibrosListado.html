@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+</head>
+
+<style>
+h1 {
+  color: #6c2eb9;
+  font-weight: normal;
+  font-size: 40px;
+  font-family: Arial;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.boton {
+	border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+	padding: 10px; /*espacio alrededor texto*/
+	background-color: #2e518b; /*color botón*/
+	color: #ffffff; /*color texto*/
+	text-decoration: none; /*decoración texto*/
+	text-transform: uppercase; /*capitalización texto*/
+	font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+	border-radius: 10px; /*bordes redondos*/
+}
+
+table
+	{
+		font-family: sans-serif;
+		font-style: normal;
+		font-size: 12pt;
+  		border-collapse: collapse;
+  		border-style: none;
+        border-width: 0;
+        width: 97%;
+	}
+	
+td, th, tr 
+	{	
+		font-family: sans-serif;
+		font-style: normal;
+		font-size: 12pt;		
+  		border: 1px solid black;
+  		border-collapse: collapse;
+  		padding: 5px;
+	}
+		
+</style>
+
+<body>
+
+	<h1>Lista de libros</h1>
+	
+	<table >
+		<tr style="background-color:lightblue">
+			<th  >Identificador</th>
+			<th  >TITULO</th>
+		</tr>
+		<tr   th:each="book:${listaBooks}">
+			<td th:text="${book.idBook}"></td>
+			<td th:text="${book.titulo}"></td>
+		</tr>
+		
+		<tr class="w3-border-0" >
+			<td class="w3-border-0" >	
+				<form action="webIncio" class="w3-border-0" >
+					<input id="btnIncio" 
+							class="boton"
+							type="submit" 
+							value="Home"/>									
+				</form>
+			</td>
+			
+			<td class="w3-border-0">		
+				<form action="nuevoLibro" class="w3-border-0" >
+					<input id="btnNewBook" 
+							class="boton"
+							type="submit" 
+							value="Nuevo Libro"/>									
+				</form>
+			</td>
+		</tr>
+	</table> 
+
+
+						
+</body>
+</html>

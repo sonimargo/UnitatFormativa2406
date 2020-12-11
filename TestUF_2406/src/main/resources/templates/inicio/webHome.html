@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<style>
+h1 {
+  color: #6c2eb9;
+  font-weight: normal;
+  font-size: 40px;
+  font-family: Arial;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.boton {
+	border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+	padding: 10px; /*espacio alrededor texto*/
+	background-color: #2e518b; /*color botón*/
+	color: #ffffff; /*color texto*/
+	text-decoration: none; /*decoración texto*/
+	text-transform: uppercase; /*capitalización texto*/
+	font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+	border-radius: 10px; /*bordes redondos*/
+}
+</style>
+
+<head>
+
+</head>
+<body>
+
+	<h1 >Gestion libros y citas </h1>
+	
+	<table align="center">
+		<tr align="center">
+			<td>
+				<form action="gestionBooks">
+				<input id="btnNewBook" 
+						class="boton"
+						type="submit" 
+						value="Libros"/>									
+				</form>
+			</td>
+			<td></td>
+			<td></td>
+			<td>
+				<form action="gestionQuotes">
+				<input id="btnNewQuote" 
+						class="boton"
+						type="submit" 
+						value="Citas"/>									
+				</form>
+			</td>
+			
+		</tr>
+		
+	</table> 
+
+</body>
+</html>

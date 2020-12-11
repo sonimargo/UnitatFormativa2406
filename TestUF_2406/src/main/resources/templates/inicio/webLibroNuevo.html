@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+
+</head>
+
+<style>
+h1 {
+  color: #6c2eb9;
+  font-weight: normal;
+  font-size: 40px;
+  font-family: Arial;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.boton {
+	border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+	padding: 10px; /*espacio alrededor texto*/
+	background-color: #2e518b; /*color botón*/
+	color: #ffffff; /*color texto*/
+	text-decoration: none; /*decoración texto*/
+	text-transform: uppercase; /*capitalización texto*/
+	font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+	border-radius: 10px; /*bordes redondos*/
+}
+
+table
+	{
+		font-family: sans-serif;
+		font-style: normal;
+		font-size: 12pt;
+  		border-collapse: collapse;
+  		border-style: none;
+        border-width: 0;
+        width: 100%;
+	}
+	
+td, th, tr 
+	{	
+		font-family: sans-serif;
+		font-style: normal;
+		font-size: 12pt;		
+  		border: 1px solid black;
+  		border-collapse: collapse;
+  		padding: 5px;
+	}
+		
+
+td2 
+	{	
+		font-family: sans-serif;
+		font-style: normal;
+		font-size: 12pt;		
+  		border: 1px solid black;
+  		border-collapse: collapse;
+  		padding: 5px;
+  		width: 50px;
+	}
+	
+			
+</style>
+
+<body>
+ 
+	<h1>Alta Nuevo Libro</h1>	
+	
+	<form action="insertarBook">
+	
+		<table >
+			<tr >
+				<td >
+					<label for="txttitulo">Titulo:</label> 
+					<input type="text" name="titulo"  id="txttitulo" />
+				</td>
+							
+			</tr>
+							
+			<tr >
+				<td >
+					<div class = "td2"> 
+					<input id="btnAltaLibro" class=boton type="submit" value="ALTA LIBRO"/>
+
+					<form action="gestionBooks"
+						<input id="btnCancelar" class=boton type="submit" value="CANCELAR"/>
+					</form>
+					</div>
+				</td >
+			</tr>	
+
+					
+		</table>
+	</form>
+</body>
+</html>
